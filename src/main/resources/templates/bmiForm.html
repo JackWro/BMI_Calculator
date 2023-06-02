@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator BMI</title>
+  <style>
+    body {
+      background-color: #f2f2f2; /* Szare tło */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Wysokość na całą wysokość widoku */
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: #ffffff; /* Białe tło formularza */
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cień formularza */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .submit-button {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Dodaj inne style, jakie Cię interesują */
+  </style>
+</head>
+<body>
+<div class="form-container">
+  <h1 class="form-title">Kalkulator BMI</h1>
+
+  <form method="post" action="/calculate">
+    <label for="weight">Waga (kg):</label>
+    <input type="text" id="weight" name="weight" pattern="[0-9]+" title="Wprowadź tylko cyfry" required><br><br>
+
+    <label for="height">Wzrost (m):</label>
+    <input type="text" id="height" name="height" pattern="[0-9]+(\.[0-9]+)?" title="Wprowadź wzrost w formacie x.y" required><br><br>
+
+    <div class="submit-button">
+      <input type="submit" value="Oblicz BMI">
+    </div>
+  </form>
+</div>
+</body>
+</html>

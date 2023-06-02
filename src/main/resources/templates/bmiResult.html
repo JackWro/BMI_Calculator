@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>BMI Kalkulator</title>
+  <style>
+    body {
+      background-color: #f2f2f2; /* Szare tło */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Wysokość na całą wysokość widoku */
+      margin: 0;
+    }
+
+    .result-container {
+      background-color: #ffffff; /* Białe tło wyników */
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cień wyników */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Dodaj inne style, jakie Cię interesują */
+  </style>
+</head>
+<body>
+<div class="result-container">
+  <h1 style="text-align: center;">Wynik BMI</h1>
+
+  <p>Twoje BMI: <span th:text="${bmi}"></span></p>
+  <p>Opis: <span th:text="${category}"></span></p>
+</div>
+</body>
+</html>
